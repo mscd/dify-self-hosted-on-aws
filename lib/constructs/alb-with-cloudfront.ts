@@ -91,9 +91,7 @@ export class AlbWithCloudFront extends Construct implements IAlb {
         allowedMethods: AllowedMethods.ALLOW_ALL,
         originRequestPolicy: OriginRequestPolicy.ALL_VIEWER,
       },
-      logBucket: accessLogBucket,
-      logFilePrefix: 'dify-cloudfront/',
-    });
+     ;
     this.url = `https://${distribution.domainName}`;
 
     const vpcOriginId = 'VpcOriginV2';
